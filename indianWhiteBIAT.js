@@ -1,108 +1,138 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat6.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat6.js'], function(APIConstructor, iatExtension) {
     var API = new APIConstructor();
 
     return iatExtension({
-        practiceCategory1 : 
-            {
-                name : 'Good', //Will appear in the data.
-                title : {
-                    media : {word : 'Good'}, //Name of the category presented in the task.
-                    css : {color:'#31b404','font-size':'1.8em'}, //Style of the category title.
-                    height : 4, //Height (because we need to know where to put the next item in the title)
-                    startStimulus : { 
-                    //If you're using a startStimulus, set here. If not, set the parameter showStimuliWithInst to false (see later below)
-                        media : {word : 'Wonderful, Pleasant, Beautiful, Excellent'}, 
-                        css : {color:'#31b404','font-size':'1em'}, 
-                        height : 2
-                    }
-                }, 
-                stimulusMedia : [ //Stimuli content as PIP's media objects
-                    {word : 'Wonderful'}, 
-                    {word : 'Pleasant'}, 
-                    {word : 'Beautiful'}, 
-                    {word : 'Excellent'},
-                    {word : 'Amazing'},
-                    {word : 'Fantastic'}
-                ], 
-                //Stimulus css (style of the stimuli)
-                stimulusCss : {color:'#31b404','font-size':'2em'}
-            },	
-            practiceCategory2 : 
-            {
-                name : 'Bad', 
-                title : {
-                    media : {word : 'Bad'}, 
-                    css : {color:'#31b404','font-size':'1.8em'}, 
-                    height : 4,
-                    startStimulus : {
-                        media : {word : 'Terrible, Unpleasant, Awful, Horrible'}, 
-                        css : {color:'#31b404','font-size':'1em'}, 
-                        height : 2
-                    }
-                }, 
-                stimulusMedia : [ //Stimuli content as PIP's media objects
-                    {word : 'Terrible'}, 
-                    {word : 'Unpleasant'}, 
-                    {word : 'Awful'}, 
-                    {word : 'Horrible'},
-                    {word : 'Disgusting'},
-                    {word : 'Nasty'}
-                ], 
-                //Stimulus css
-                stimulusCss : {color:'#31b404','font-size':'2em'}
-            },
-            categories : [  //As many categories you need.
-                {
-                    name : 'Indian Names', //Will appear in the data.
-                    title : {
-                        media : {word : 'Indian Names'}, //Name of the category presented in the task.
-                        css : {color:'#31b404','font-size':'1.8em'}, //Style of the category title.
-                        height : 4, //Height (because we need to know where to put the next item in the title)
-                        startStimulus : { 
-                        //If you're using a startStimulus, set here. If not, set the parameter showStimuliWithInst to false (see later below)
-                        media : {word : 'Rajesh, Priya, Amit, Kavya'}, 
-                            css : {color:'#31b404','font-size':'1em'}, 
-                            height : 2
-                        }
-                    }, 
-                    stimulusMedia : [ //Stimuli content as PIP's media objects
-                    {word : 'Rajesh'}, 
-                    {word : 'Priya'}, 
-                    {word : 'Amit'}, 
-                    {word : 'Kavya'}, 
-                    {word : 'Deepak'}, 
-                    {word : 'Anita'},
-                    {word : 'Suresh'},
-                    {word : 'Meera'}
-                    ], 
-                    //Stimulus css (style of the stimuli)
-                    stimulusCss : {color:'#31b404','font-size':'2em'}
-                },	
-                {
-                    name : 'White Names', 
-                    title : {
-                        media : {word : 'White Names'}, 
-                        css : {color:'#31b404','font-size':'1.8em'}, 
-                        height : 4,
-                        startStimulus : {
-                            media : {word : 'John, Sarah, Michael, Emily'},  
-                            css : {color:'#31b404','font-size':'1em'}, 
-                            height : 2
-                        }
-                    }, 
-                    stimulusMedia : [ //Stimuli content as PIP's media objects
-                    {word : 'John'}, 
-                    {word : 'Sarah'}, 
-                    {word : 'Michael'}, 
-                    {word : 'Emily'}, 
-                    {word : 'David'}, 
-                    {word : 'Jessica'},
-                    {word : 'Robert'},
-                    {word : 'Amanda'}
-                    ], 
-                    //Stimulus css
-                    stimulusCss : {color:'#31b404','font-size':'2em'}
+        practiceCategory1: {
+            name: 'Fruits',
+            title: {
+                media: { word: 'Fruits' },
+                css: { color: '#31b404', 'font-size': '1.8em' },
+                height: 4,
+                startStimulus: {
+                    media: { word: 'Apple, Banana, Mango, Orange' },
+                    css: { color: '#31b404', 'font-size': '1em' },
+                    height: 2
                 }
-            ]
+            },
+            stimulusMedia: [
+                { word: 'Apple' },
+                { word: 'Banana' },
+                { word: 'Mango' },
+                { word: 'Orange' }
+            ],
+            stimulusCss: { color: '#31b404', 'font-size': '2em' }
+        },
+        practiceCategory2: {
+            name: 'Vegetables',
+            title: {
+                media: { word: 'Vegetables' },
+                css: { color: '#31b404', 'font-size': '1.8em' },
+                height: 4,
+                startStimulus: {
+                    media: { word: 'Carrot, Potato, Spinach, Broccoli' },
+                    css: { color: '#31b404', 'font-size': '1em' },
+                    height: 2
+                }
+            },
+            stimulusMedia: [
+                { word: 'Carrot' },
+                { word: 'Potato' },
+                { word: 'Spinach' },
+                { word: 'Broccoli' }
+            ],
+            stimulusCss: { color: '#31b404', 'font-size': '2em' }
+        },
+        categories: [
+            {
+                name: 'Indians',
+                title: {
+                    media: { word: 'Indians' },
+                    css: { color: '#0000ff', 'font-size': '1.8em' },
+                    height: 4,
+                    startStimulus: {
+                        media: { word: 'Arjun, Deepika, Rajesh, Kavya' },
+                        css: { color: '#0000ff', 'font-size': '1em' },
+                        height: 2
+                    }
+                },
+                stimulusMedia: [
+                    { word: 'Arjun' },
+                    { word: 'Deepika' },
+                    { word: 'Rajesh' },
+                    { word: 'Kavya' },
+                    { word: 'Vikram' },
+                    { word: 'Ananya' }
+                ],
+                stimulusCss: { color: '#0000ff', 'font-size': '2em' }
+            },
+            {
+                name: 'Whites',
+                title: {
+                    media: { word: 'Whites' },
+                    css: { color: '#0000ff', 'font-size': '1.8em' },
+                    height: 4,
+                    startStimulus: {
+                        media: { word: 'Tyler, Jessica, Brandon, Ashley' },
+                        css: { color: '#0000ff', 'font-size': '1em' },
+                        height: 2
+                    }
+                },
+                stimulusMedia: [
+                    { word: 'Tyler' },
+                    { word: 'Jessica' },
+                    { word: 'Brandon' },
+                    { word: 'Ashley' },
+                    { word: 'Connor' },
+                    { word: 'Jennifer' }
+                ],
+                stimulusCss: { color: '#0000ff', 'font-size': '2em' }
+            }
+        ],
+        attributes: [
+            {
+                name: 'Good',
+                title: {
+                    media: { word: 'Good' },
+                    css: { color: '#green', 'font-size': '1.8em' },
+                    height: 4,
+                    startStimulus: {
+                        media: { word: 'Joy, Love, Peace, Wonderful' },
+                        css: { color: 'green', 'font-size': '1em' },
+                        height: 2
+                    }
+                },
+                stimulusMedia: [
+                    { word: 'Joy' },
+                    { word: 'Love' },
+                    { word: 'Peace' },
+                    { word: 'Pleasure' },
+                    { word: 'Happy' },
+                    { word: 'Wonderful' }
+                ],
+                stimulusCss: { color: 'green', 'font-size': '2em' }
+            },
+            {
+                name: 'Bad',
+                title: {
+                    media: { word: 'Bad' },
+                    css: { color: 'red', 'font-size': '1.8em' },
+                    height: 4,
+                    startStimulus: {
+                        media: { word: 'Hate, Pain, Horrible, Evil' },
+                        css: { color: 'red', 'font-size': '1em' },
+                        height: 2
+                    }
+                },
+                stimulusMedia: [
+                    { word: 'Hate' },
+                    { word: 'Pain' },
+                    { word: 'Horrible' },
+                    { word: 'Evil' },
+                    { word: 'Awful' },
+                    { word: 'Nasty' }
+                ],
+                stimulusCss: { color: 'red', 'font-size': '2em' }
+            }
+        ]
     });
 });
